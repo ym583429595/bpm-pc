@@ -1,13 +1,13 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import App from '@/App';
-import Home from '@/components/common/Home.vue';
-import Process from '@/components/process/index.vue';
-import Draft from '@/components/draft/index.vue';
-import History from '@/components/history/index.vue';
-import Statistics from '@/components/statistics/index.vue';
-import Infor from '@/components/infor/index.vue';
-import Setting from '@/components/setting/index.vue';
+import Home from '@/components/common/Home';
+import Process from '@/components/process/index';
+import Draft from '@/components/draft/index';
+import History from '@/components/history/index';
+import Statistics from '@/components/statistics/index';
+import Infor from '@/components/infor/index';
+import Setting from '@/components/setting/index';
 
 Vue.use(Router);
 
@@ -18,27 +18,33 @@ export default new Router({
       name: 'App',
       component: App,
       children: [{
+        path: '/',
+        component: Process,
+      }, {
         path: 'process',
-        componnet: Process,
+        component: Process,
       }, {
         path: 'draft',
-        componnet: Draft,
+        component: Draft,
       }, {
         path: 'history',
-        componnet: History,
+        component: History,
       }, {
         path: 'statistics',
-        componnet: Statistics,
+        component: Statistics,
       }, {
         path: 'infor',
-        componnet: Infor,
+        component: Infor,
       }, {
         path: 'setting',
-        componnet: Setting,
+        component: Setting,
       }],
     }, {
       path: '/home',
       component: Home,
+    }, {
+      path: '/',
+      redirect: '/app',
     },
   ],
 });

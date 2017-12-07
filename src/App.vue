@@ -8,7 +8,7 @@
           <BPMnav></BPMnav>
         </aside>
         <main class="el-main">
-          <router-view/>
+          <router-view ></router-view>
         </main>
       </section>
     </section>
@@ -17,8 +17,8 @@
 <script>
 import Vue from 'vue';
 import { header, aside, main } from 'element-ui';
-import BPMHeader from '@/components/common/BPMHeader.vue';
-import BPMnav from '@/components/common/BPMNav.vue';
+import BPMHeader from '@/components/common/BPMHeader';
+import BPMnav from '@/components/common/BPMNav';
 
 Vue.use(header);
 Vue.use(aside);
@@ -40,5 +40,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  font-size: 16px;
 }
+
 </style>

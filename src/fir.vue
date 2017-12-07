@@ -10,6 +10,8 @@ export default {
   components: { App },
 };
 </script>
-<style type="text/css" scoped>
-
+<style type="text/css" >
+  body{
+    font-size: 16px;
+  }
 </style>
