@@ -14,4 +14,9 @@ export default {
   body{
     font-size: 16px;
   }
+  /*覆盖框架样式，使badge居中*/
+  .item .el-badge__content.is-fixed{
+    top: 20px;
+    right: 40px;
+  }
 </style>
